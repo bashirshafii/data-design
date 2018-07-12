@@ -10,7 +10,7 @@
 		<ul>
 			<li>Article</li>
 			<li>Images</li>
-			<li>Comments</li>
+
 		</ul>
 		<h4>Article</h4>
 		<ol>
@@ -18,35 +18,24 @@
 			<li>imageID(Foreign Key)</li>
 			<li>articleHeader</li>
 			<li>articleAuthor</li>
-			<li>articlePublishDate</li>
-			<li>articlePublishTime</li>
-			<li>articleCommentsCount</li>
+			<li>articlePublishDateAndTime</li>
+
+
 		</ol>
 		<h4>Image</h4>
 		<ol>
 			<li>imageID(Primary Key)</li>
 			<li>imageSize</li>
+			<li>imageFileType</li>
 			<li>imageCaption</li>
 			<li>imageCopyrightOwner</li>
 		</ol>
-		<h4>Comments</h4>
-		<ol>
-			<li>commentID(PrimaryKey)</li>
-			<li>articleID(Foreign Key)</li>
-			<li>commentType</li>
-			<li>commentAuthorUserId</li>
-			<li>commentAuthorLocation</li>
-			<li>commentTime</li>
-			<li>commentLikes</li>
-		</ol>
-		<h4>Relations</h4>
-		<ol>
-			<li>An article can have one or many images</li>
-			<li>An image can be shared by many articles</li>
-			<li>An article can have one or many comments</li>
-		</ol>
 
-
+		<h4>Relationships</h4>
+		<ol>
+			<li>One article can have many images(<strong>1 to n</strong>)</li>
+			<li>Many images can be attached to many articles (<strong>m to n</strong>)</li>
+		</ol>
 
 		<a href="index.php">Home</a>
 	</body>

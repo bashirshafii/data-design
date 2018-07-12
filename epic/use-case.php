@@ -47,17 +47,6 @@
 				<li>user is able to navigate to any article</li>
 				<li>user is able to click on images and link to the articles and images</li>
 			</ol>
-			<p>Alternative Flows: </p>
-			<p>1A: Joe is not connected to the internet has no access to a computing device</p>
-			<ol>
-				<li>User types New York Times URL(<a href="https://www.nytimes.com">nytimes.com</a>) into browser</li>
-				<li>Joe will get a message that there's no internet connection and will  be prompted to connect to the internet to </li>
-				<li>Once there is internet connection, the normal flow use case will resume</li>
-			</ol>
-			<p>1B: Joe has no access to a computing device</p>
-			<ol>
-				<li>User reads the New York Times paper </li>
-			</ol>
 
 
 		</div>
