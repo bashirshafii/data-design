@@ -15,6 +15,7 @@
 		<h4>Article</h4>
 		<ol>
 			<li>articleID(Primary Key)</li>
+			<li>imageID(Foreign Key)</li>
 			<li>articleHeader</li>
 			<li>articleAuthor</li>
 			<li>articlePublishDate</li>
@@ -31,6 +32,7 @@
 		<h4>Comments</h4>
 		<ol>
 			<li>commentID(PrimaryKey)</li>
+			<li>articleID(Foreign Key)</li>
 			<li>commentType</li>
 			<li>commentAuthorUserId</li>
 			<li>commentAuthorLocation</li>
