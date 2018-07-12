@@ -19,7 +19,7 @@
 		</ul>
 		<h4>Likes, Needs and Frustrations</h4>
 		<ul>
-			<li>Joes likes to read and intellectually challenge himself</li>
+			<li>Joe likes to read and intellectually challenge himself</li>
 			<li>He needs a reputable source of information, specially in these days of "alternative facts".</li>
 			<li>He is frustrated by the shallow depth of most national news outlets, most of which function as <em>de facto </em>public relations arm of the US Federal Government </li>
 		</ul>
