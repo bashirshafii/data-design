@@ -14,8 +14,7 @@
 		</ul>
 		<h4>Article</h4>
 		<ol>
-			<li>articleID(Primary Key)</li>
-			<li>imageID(Foreign Key)</li>
+			<li>articleId(Primary Key)</li>
 			<li>articleHeader</li>
 			<li>articleAuthor</li>
 			<li>articlePublishDateAndTime</li>
@@ -24,11 +23,16 @@
 		</ol>
 		<h4>Image</h4>
 		<ol>
-			<li>imageID(Primary Key)</li>
+			<li>imageId(Primary Key)</li>
 			<li>imageSize</li>
 			<li>imageFileType</li>
 			<li>imageCaption</li>
 			<li>imageCopyrightOwner</li>
+		</ol>
+		<h4>Connection</h4>
+		<ol>
+			<li>articleId(Foreign Key)</li>
+			<li>imageId(Foreign Key)</li>
 		</ol>
 
 		<h4>Relationships</h4>
