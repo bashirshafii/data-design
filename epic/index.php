@@ -10,6 +10,7 @@
 				<li><a href="joe.php">Persona<a/></li>
 				<li><a href="use-case.php">Use Case & User Story</a> </li>
 				<li><a href="conceptual-model.php">Conceptual Model</a></li>
+				<li><a href="ERD.svg">ERD</a></li>
 			</ul>
 		</nav>
 	</header>
