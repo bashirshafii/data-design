@@ -21,13 +21,13 @@ imageCopyrightOwner
 
 CREATE TABLE article (
 
-	articleId BINARY(16) NOT NULL,
-	articleHeader VARCHAR (200) NOT NULL,
-	articleAuthor VARCHAR (50) NOT NULL,
-	articlePublishDateAndTime DATETIME(6) NOT NULL,
-	UNIQUE(articleHeader),
-	FOREIGN KEY(imageID) REFERENCES article(articleId),
-	PRIMARY KEY(articleId)
+articleId BINARY(16) NOT NULL,
+articleHeader VARCHAR (200) NOT NULL,
+articleAuthor VARCHAR (50) NOT NULL,
+articlePublishDateAndTime DATETIME(6) NOT NULL,
+UNIQUE(articleHeader),
+FOREIGN KEY(imageID) REFERENCES article(articleId),
+PRIMARY KEY(articleId)
 );
 
 CREATE TABLE image (
