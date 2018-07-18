@@ -33,7 +33,7 @@
 		<h4>ArticleImage</h4>
 		<ol>
 			<li>articleImageArticleId(Foreign Key)</li>
-			<li>ArticleImageImageId(Foreign Key)</li>
+			<li>articleImageImageId(Foreign Key)</li>
 		</ol>
 
 		<h4>Relationships</h4>
