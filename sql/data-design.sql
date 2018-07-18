@@ -3,21 +3,9 @@ ALTER DATABASE bshafii CHARACTER SET utf8 COLLATE utf8_unicode_ci;
 
 DROP TABLE IF EXISTS image;
 DROP TABLE IF EXISTS article;
+DROP TABLE IF EXISTS articleImage;
 
-/*
-articleID(Primary Key)
-imageID(Foreign Key)
-articleHeader
-articleAuthor
-articlePublishDateAndTime
- */
- /*
- imageID(Primary Key)
-imageSize
-imageFileType
-imageCaption
-imageCopyrightOwner
-  */
+
 
 CREATE TABLE article (
 
@@ -26,7 +14,6 @@ articleHeader VARCHAR (200) NOT NULL,
 articleAuthor VARCHAR (50) NOT NULL,
 articlePublishDateAndTime DATETIME(6) NOT NULL,
 UNIQUE(articleHeader),
-FOREIGN KEY(imageID) REFERENCES article(articleId),
 PRIMARY KEY(articleId)
 );
 
@@ -37,5 +24,12 @@ imageFileType VARCHAR (30),
 imageCaption VARCHAR (200),
 imageCopyrightOwner VARCHAR (50),
 PRIMARY KEY(imageID)
+);
+
+CREATE TABLE articleImage(
+ articleImageArticleId BINARY(32) NOT NULL,
+ articleImageImageId BINARY(32) NOT NULL,
+ FOREIGN KEY(articleImageArticleId) REFERENCES article(articleId),
+ FOREIGN KEY(articleImageImageId) REFERENCES image(imageId)
 );
 

@@ -9,7 +9,8 @@
 		<h3>Entities and Attributes</h3>
 		<ul>
 			<li>Article</li>
-			<li>Images</li>
+			<li>Image</li>
+			<li>ArticleImage</li>
 
 		</ul>
 		<h4>Article</h4>
@@ -29,15 +30,14 @@
 			<li>imageCaption</li>
 			<li>imageCopyrightOwner</li>
 		</ol>
-		<h4>Connection</h4>
+		<h4>ArticleImage</h4>
 		<ol>
-			<li>articleId(Foreign Key)</li>
-			<li>imageId(Foreign Key)</li>
+			<li>articleImageArticleId(Foreign Key)</li>
+			<li>ArticleImageImageId(Foreign Key)</li>
 		</ol>
 
 		<h4>Relationships</h4>
 		<ol>
-			<li>One article can have many images(<strong>1 to n</strong>)</li>
 			<li>Many images can be attached to many articles (<strong>m to n</strong>)</li>
 		</ol>
 
