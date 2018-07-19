@@ -19,6 +19,7 @@
 			<li>articleHeader</li>
 			<li>articleAuthor</li>
 			<li>articlePublishDateAndTime</li>
+			<li>articleContent</li>
 
 
 		</ol>

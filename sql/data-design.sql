@@ -13,6 +13,7 @@ articleId BINARY(16) NOT NULL,
 articleHeader VARCHAR (200) NOT NULL,
 articleAuthor VARCHAR (50) NOT NULL,
 articlePublishDateAndTime DATETIME(6) NOT NULL,
+articleContent TEXT NOT NULL;
 UNIQUE(articleHeader),
 PRIMARY KEY(articleId)
 );
@@ -22,6 +23,7 @@ imageID BINARY(32) NOT NULL,
 imageSize VARCHAR (30),
 imageFileType VARCHAR (30),
 imageCaption VARCHAR (200),
+UNIQUE (imageCaption),
 imageCopyrightOwner VARCHAR (50),
 PRIMARY KEY(imageID)
 );
