@@ -13,7 +13,7 @@ articleId BINARY(16) NOT NULL,
 articleHeader VARCHAR (200) NOT NULL,
 articleAuthor VARCHAR (50) NOT NULL,
 articlePublishDateAndTime DATETIME(6) NOT NULL,
-articleContent TEXT NOT NULL;
+articleContent TEXT NOT NULL,
 UNIQUE(articleHeader),
 PRIMARY KEY(articleId)
 );
@@ -34,4 +34,5 @@ CREATE TABLE articleImage(
  FOREIGN KEY(articleImageArticleId) REFERENCES article(articleId),
  FOREIGN KEY(articleImageImageId) REFERENCES image(imageId)
 );
+
 

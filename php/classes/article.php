@@ -1,10 +1,6 @@
 <?php
 
 
-//articleId(Primary Key)
-//articleHeader
-//articleAuthor
-//articlePublishDateAndTime
 
 /**
  * Newspaper article class
@@ -23,59 +19,68 @@ Class Article {
 	private $articlePublishDateAndTime;
 	private $articleContent;
 
+	public function __construct(string $articleId, string $articleHeader, string $articleAuthor, datetime $articlePublishDateAndTime, string $articleContent ) {
+	 try{
+	 	$this->setArticleId();
+		$this->setArticleHeader();
+		$this->setArticleAuthor();
+		$this->setArticlePublishDateAndTime();
+		$this->setarticleContent();
+
+	 } catch(\InvalidArgumentException | \RangeException | \Exception | \TypeError $exception){
+	 	$exceptionType = get_class($exception);
+	 	throw(new $exceptionType($exception->getMessage(),0, $exception));
+
+	 }
+
+
+	}
+
 	//mutator method for articleID
-	public function setArticleId(){
-		 return $this->articleIdId;
+	public function setArticleId(): void{
+		return ($this->articleId);
 
 	}
 	//accessor method for articleId
-	public function getArticleId(): string {
+	public function getArticleId(): Uuid {
 		return ($this->articleId);
 	}
 	//mutator method for articleHeader
-	public function setArticleHeader($articleHeader){
-		//validate articleHeader is string
-		if(!is_string($articleHeader)){
-			throw new Exception('$articleHeader must be a string!');
-		}
+	public function setArticleHeader() : void {
+
 		return ($this->articleHeader);
 	}
 	//accessor method for articleHeader
-	public function getArticleHeader(){
+	public function getArticleHeader() : string {
 
 		return ($this->articleHeader);
 	}
 //mutator method for articleAuthor
-	public function setArticleAuthor($articleAuthor){
-		//validate articleAuthor is string
-		if(!is_string($articleAuthor)){
-			throw new Exception('$articleAuthor must be a string!');
-		}
+	public function setArticleAuthor() : void{
+		
+
 		return ($this->articleAuthor);
 	}
 	//accessor method for articleAuthor
-	public function getArticleAuthor(){
+	public function getArticleAuthor() : string {
 		return ($this->articleAuthor);
 	}
 //mutator method for articlePublishDateAndTime
-	public function setArticlePublishDateAndTime(){
+	public function setArticlePublishDateAndTime() : void{
 		return ($this->articlePublishDateAndTime);
 	}
 	//accessor method for articlePublishDateAndTime
-	public function getArticlePublishDateAndTime(){
+	public function getArticlePublishDateAndTime() : datetime {
 		return ($this->articlePublishDateAndTime);
 	}
 
 //mutator method for articleContent
-	public function setArticleContent($articleContent){
+	public function setArticleContent(): void{
 		//validate articleAuthor is string
-		if(!is_string($articleContent)){
-			throw new Exception('$articleAuthor must be a string!');
-		}
 		return ($this->articleContent);
 	}
 	//accessor method for articleContent
-	public function getArticleContent(){
+	public function getArticleContent() : string {
 		return ($this->articleContent);
 	}
 }
