@@ -9,11 +9,11 @@ DROP TABLE IF EXISTS articleImage;
 
 CREATE TABLE article (
 
-articleId BINARY(16) NOT NULL,
+articleId BINARY(32) NOT NULL,
 articleHeader VARCHAR (200) NOT NULL,
 articleAuthor VARCHAR (50) NOT NULL,
 articlePublishDateAndTime DATETIME(6) NOT NULL,
-articleContent TEXT NOT NULL,
+articleContent TEXT (6000) NOT NULL,
 UNIQUE(articleHeader),
 PRIMARY KEY(articleId)
 );
