@@ -54,7 +54,7 @@ Class Article {
 	 * @throws \Exception if some other exception occurs
 	 */
 
-	public function __construct($newArticleId, string $newArticleHeader, string $newArticleAuthor, $newArticlePublishDateAndTime, string $newArticleContent ) {
+	public function __construct(string $newArticleId, string $newArticleHeader, string $newArticleAuthor, $newArticlePublishDateAndTime, string $newArticleContent ) {
 	 try{
 	 	$this->setArticleId($newArticleId);
 		$this->setArticleHeader($newArticleHeader);
