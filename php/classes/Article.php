@@ -1,5 +1,5 @@
 <?php
-namespace Bshafii\DataDesign;
+namespace BashirShafii\DataDesign;
 require_once("autoload.php");
 require_once(dirname(__DIR__, 2) . "/vendor/autoload.php");
 use Ramsey\Uuid\Uuid;
@@ -10,7 +10,6 @@ use Ramsey\Uuid\Uuid;
  */
 
 Class Article {
-	Use
 	/**
 	 * id for Newspaper article. This is the primary key
 	 * @var Uuid $articleId
