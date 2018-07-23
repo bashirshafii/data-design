@@ -10,6 +10,7 @@ use Ramsey\Uuid\Uuid;
  */
 
 Class Article {
+	use ValidateUuid;
 	/**
 	 * id for Newspaper article. This is the primary key
 	 * @var Uuid $articleId
@@ -46,7 +47,7 @@ Class Article {
 	 * @param string $newArticleId
 	 * @param string $newArticleHeader
 	 * @param string $newArticleAuthor
-	 * @param datetime $newArticlePublishDateAndTime
+	 * @param string $newArticlePublishDateAndTime
 	 * @param string $newArticleContent
 	 * @throws \InvalidArgumentException if data types are not valid
 	 * @throws \RangeException if data values are out of bounds (e.g., strings too long, negative integers)
@@ -54,7 +55,7 @@ Class Article {
 	 * @throws \Exception if some other exception occurs
 	 */
 
-	public function __construct(string $newArticleId, string $newArticleHeader, string $newArticleAuthor, $newArticlePublishDateAndTime, string $newArticleContent ) {
+	public function __construct(string $newArticleId, string $newArticleHeader, string $newArticleAuthor, string $newArticlePublishDateAndTime, string $newArticleContent ) {
 	 try{
 	 	$this->setArticleId($newArticleId);
 		$this->setArticleHeader($newArticleHeader);
@@ -197,6 +198,6 @@ Class Article {
 }
 
 
-$sundayArticle = new Article();
-$sundayArticle->setArticleHeader("Global Warming in Real!");
+$sundayArticle = new Article("18f2b5309fcd4a0885fabfefb9cf2933","today's news ","Bashir Shafii", "1/2/2018", "Blah Blah Blah");
+//$sundayArticle->setArticleHeader("Global Warming in Real!");
 $sundayArticle->getArticleHeader();
