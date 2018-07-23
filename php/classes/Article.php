@@ -1,7 +1,8 @@
 <?php
-
-
-
+namespace Bshafii\DataDesign;
+require_once("autoload.php");
+require_once(dirname(__DIR__, 2) . "/vendor/autoload.php");
+use Ramsey\Uuid\Uuid;
 /**
  * Newspaper article class
  * @author Bashir Shafii
@@ -9,7 +10,7 @@
  */
 
 Class Article {
-	Use ValidateUuid;
+	Use
 	/**
 	 * id for Newspaper article. This is the primary key
 	 * @var Uuid $articleId
@@ -54,7 +55,7 @@ Class Article {
 	 * @throws \Exception if some other exception occurs
 	 */
 
-	public function __construct($newArticleId, string $newArticleHeader, string $newArticleAuthor, datetime $newArticlePublishDateAndTime, string $newArticleContent ) {
+	public function __construct($newArticleId, string $newArticleHeader, string $newArticleAuthor, $newArticlePublishDateAndTime, string $newArticleContent ) {
 	 try{
 	 	$this->setArticleId($newArticleId);
 		$this->setArticleHeader($newArticleHeader);
@@ -111,9 +112,9 @@ Class Article {
 
 	public function setArticleHeader($newArticleHeader) : void {
 		//make sure article header is not empty
-		if(empty([$newArticleHeader])) {
+		if(empty($newArticleHeader) === true) {
 			throw(new \RangeException("article header field can't be empty"));
-			return;
+
 		}
 
 		//make sure article header  is not longer than 200 characters
@@ -157,17 +158,17 @@ Class Article {
 	 * @return datetime
 	 */
 
-	public function getArticlePublishDateAndTime() : datetime {
+	public function getArticlePublishDateAndTime() : DateTime {
 		return ($this->articlePublishDateAndTime);
 	}
 	/**
-	 *
+	 * @param $newArticlePublishDateAndTime
 	 * mutator method for articlePublishDateAndTime
 	 */
 
 
 	public function setArticlePublishDateAndTime($newArticlePublishDateAndTime) : void {
-		//$this->articlePublishDateAndTime = $newArticlePublishDateAndTime;
+		$this->articlePublishDateAndTime = $newArticlePublishDateAndTime;
 	}
 
 

@@ -9,23 +9,23 @@ DROP TABLE IF EXISTS articleImage;
 
 CREATE TABLE article (
 
-articleId BINARY(32) NOT NULL,
+articleId BINARY(16) NOT NULL,
 articleHeader VARCHAR (200) NOT NULL,
 articleAuthor VARCHAR (50) NOT NULL,
 articlePublishDateAndTime DATETIME(6) NOT NULL,
-articleContent TEXT (6000) NOT NULL,
+articleContent VARCHAR (6000) NOT NULL,
 UNIQUE(articleHeader),
 PRIMARY KEY(articleId)
 );
 
 CREATE TABLE image (
-imageID BINARY(32) NOT NULL,
-imageSize VARCHAR (30),
+imageId BINARY(16) NOT NULL,
+imageSize INT UNSIGNED,
 imageFileType VARCHAR (30),
 imageCaption VARCHAR (200),
 UNIQUE (imageCaption),
 imageCopyrightOwner VARCHAR (50),
-PRIMARY KEY(imageID)
+PRIMARY KEY(imageId)
 );
 
 CREATE TABLE articleImage(
@@ -34,5 +34,4 @@ CREATE TABLE articleImage(
  FOREIGN KEY(articleImageArticleId) REFERENCES article(articleId),
  FOREIGN KEY(articleImageImageId) REFERENCES image(imageId)
 );
-
 
